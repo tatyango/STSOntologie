@@ -1,1 +1,538 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+@base <http://www.theatersammlung.ch> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix eclap: <http://www.eclap.eu/schema/eclap/> .
+
+<http://www.theatersammlung.ch> rdf:type owl:Ontology ;
+                                                                
+        <http://purl.org/dc/elements/1.1/description> "TBD" 
+        <http://purl.org/dc/elements/1.1/title> "Schweizerische Theatersammlung Ontologie" ;
+        owl:versionInfo "asdf" .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://purl.org/dc/elements/1.1/description
+
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
+                                              
+                                              rdfs:label "dc:description" .
+
+
+
+###  http://purl.org/dc/elements/1.1/title
+
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty ;
+                                        
+                                        rdfs:label "dc:title" .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://webprotege.stanford.edu/R03g3FF8GgbV0Vad7QJttZ
+
+<http://webprotege.stanford.edu/R03g3FF8GgbV0Vad7QJttZ> rdf:type owl:ObjectProperty ;
+                                                        
+                                                        rdfs:label "Präsentation" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/R71ea4Aimv23a06qbBn06ZY
+
+<http://webprotege.stanford.edu/R71ea4Aimv23a06qbBn06ZY> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Technische Leitung" ;
+                                                         
+                                                         rdfs:subPropertyOf <http://webprotege.stanford.edu/R8ArB6lTGhAwMdwHFVjRE8M> .
+
+
+
+###  http://webprotege.stanford.edu/R7Lb0r9aHKzONnYtlv0Rko9
+
+<http://webprotege.stanford.edu/R7Lb0r9aHKzONnYtlv0Rko9> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Projektion" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/R7bVMGbQM4yQy6C9sXgqdik
+
+<http://webprotege.stanford.edu/R7bVMGbQM4yQy6C9sXgqdik> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Tontechnik" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/R82QGwHZZ2SpPIIQABA8h4x
+
+<http://webprotege.stanford.edu/R82QGwHZZ2SpPIIQABA8h4x> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Plakat" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/R8ArB6lTGhAwMdwHFVjRE8M
+
+<http://webprotege.stanford.edu/R8ArB6lTGhAwMdwHFVjRE8M> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Leitung" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/R8H5w5IokahbYYTR6vDg24G
+
+<http://webprotege.stanford.edu/R8H5w5IokahbYYTR6vDg24G> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Kamera" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/R8lW33ZMkeKWcC1USgtUyX2
+
+<http://webprotege.stanford.edu/R8lW33ZMkeKWcC1USgtUyX2> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Fernsehbearbeitung" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/R9K3hdbPSLeWijPnNCAinIo
+
+<http://webprotege.stanford.edu/R9K3hdbPSLeWijPnNCAinIo> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Chorleitung" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/R9S1VRcKWJCWkQo5iqXihyL
+
+<http://webprotege.stanford.edu/R9S1VRcKWJCWkQo5iqXihyL> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Herkunft Senderanstalt" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/R9dMw698rWC07RjfbZuQPgg
+
+<http://webprotege.stanford.edu/R9dMw698rWC07RjfbZuQPgg> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Produktionsleitung" ;
+                                                         
+                                                         rdfs:subPropertyOf <http://webprotege.stanford.edu/R8ArB6lTGhAwMdwHFVjRE8M> .
+
+
+
+###  http://webprotege.stanford.edu/RBdJKlG8zW2wBulUGLNi81
+
+<http://webprotege.stanford.edu/RBdJKlG8zW2wBulUGLNi81> rdf:type owl:ObjectProperty ;
+                                                        
+                                                        rdfs:label "Nachfolgemedium" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/RCCt5M7Xtr5oUGNFGx9Av6p
+
+<http://webprotege.stanford.edu/RCCt5M7Xtr5oUGNFGx9Av6p> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Aufnahmeleitung" ;
+                                                         
+                                                         rdfs:subPropertyOf <http://webprotege.stanford.edu/R8ArB6lTGhAwMdwHFVjRE8M> .
+
+
+
+###  http://webprotege.stanford.edu/RCJ82EfEQXRYgDKGW7iD7BJ
+
+<http://webprotege.stanford.edu/RCJ82EfEQXRYgDKGW7iD7BJ> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Theatersaison" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/RCxB3NJnhw0Z1O614JaoU1q
+
+<http://webprotege.stanford.edu/RCxB3NJnhw0Z1O614JaoU1q> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Moderation" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/RDrXGqww7KUbll4TaiZ9WBb
+
+<http://webprotege.stanford.edu/RDrXGqww7KUbll4TaiZ9WBb> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Ton" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/RDzgu7SOj5lwR10WGPzzczZ
+
+<http://webprotege.stanford.edu/RDzgu7SOj5lwR10WGPzzczZ> rdf:type owl:ObjectProperty ;
+                                                         
+                                                         rdfs:label "Schnitt" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/Rj10mtRzmFfbypGtkf5alZ
+
+<http://webprotege.stanford.edu/Rj10mtRzmFfbypGtkf5alZ> rdf:type owl:ObjectProperty ;
+                                                        
+                                                        rdfs:label "Bildregie" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/Rmktp71eeqT4EF6R4QGNBc
+
+<http://webprotege.stanford.edu/Rmktp71eeqT4EF6R4QGNBc> rdf:type owl:ObjectProperty ;
+                                                        
+                                                        rdfs:label "Drehbuch" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://webprotege.stanford.edu/Ru0x1Vzajjo4fmPNcO8Db2
+
+<http://webprotege.stanford.edu/Ru0x1Vzajjo4fmPNcO8Db2> rdf:type owl:ObjectProperty ;
+                                                        
+                                                        rdfs:label "Theatersaisons" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://webprotege.stanford.edu/R596k2bCJgzIh1pvKW14fg
+
+<http://webprotege.stanford.edu/R596k2bCJgzIh1pvKW14fg> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:label "Anzahl Negative" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/R7UXfK8bQe8T4OcG2dTsmEm
+
+<http://webprotege.stanford.edu/R7UXfK8bQe8T4OcG2dTsmEm> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Diverse Materialien?" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/R7qYwNpDxpRTZbLeKsh9f5o
+
+<http://webprotege.stanford.edu/R7qYwNpDxpRTZbLeKsh9f5o> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Anzahl Vorstellungen" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/R7uwtJ7F14rRenXPeP7toUF
+
+<http://webprotege.stanford.edu/R7uwtJ7F14rRenXPeP7toUF> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Anzahl Bilder" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/R82zFgP9mPHPCiPR0Yng92X
+
+<http://webprotege.stanford.edu/R82zFgP9mPHPCiPR0Yng92X> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Anzahl Dias" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/R8XqxoEUNf724Jfz5zMJnHL
+
+<http://webprotege.stanford.edu/R8XqxoEUNf724Jfz5zMJnHL> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Herkunft Senderanstalt" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/R8m2nNWKTXjZiTXs4Cr9YHd
+
+<http://webprotege.stanford.edu/R8m2nNWKTXjZiTXs4Cr9YHd> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Anzahl Fotos" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/R8of2sOUJL7r9MvDSdZSfdw
+
+<http://webprotege.stanford.edu/R8of2sOUJL7r9MvDSdZSfdw> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Presse?" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/R8uqoxNQCj9x7NjadVAWLZv
+
+<http://webprotege.stanford.edu/R8uqoxNQCj9x7NjadVAWLZv> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Originaltitel" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/RBRDKliif7cziOU23rFhDC3
+
+<http://webprotege.stanford.edu/RBRDKliif7cziOU23rFhDC3> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Aufzeichnungsdatum" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/RBq2cky0dlBfuEf73Xv3pEi
+
+<http://webprotege.stanford.edu/RBq2cky0dlBfuEf73Xv3pEi> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Anzahl Bühnenbildermodelle" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/RCwVfROoHjIICBrUPkTm6FS
+
+<http://webprotege.stanford.edu/RCwVfROoHjIICBrUPkTm6FS> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Anzahl Bühnenbilderentwurfe" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/RDTAzSAlwA9ZqyECyA4RgI
+
+<http://webprotege.stanford.edu/RDTAzSAlwA9ZqyECyA4RgI> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:label "Signatur" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/RDkLCFxVoiMCFKe4h6J0tWp
+
+<http://webprotege.stanford.edu/RDkLCFxVoiMCFKe4h6J0tWp> rdf:type owl:DatatypeProperty ;
+                                                         
+                                                         rdfs:label "Plakat Signatur" ;
+                                                         
+                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/RIFjj5kYrcDSKLGuvpAKMO
+
+<http://webprotege.stanford.edu/RIFjj5kYrcDSKLGuvpAKMO> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:label "AV Materialien Signatur" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/RIYMQ5pzfcjEL0D5hJijR3
+
+<http://webprotege.stanford.edu/RIYMQ5pzfcjEL0D5hJijR3> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:label "Programmheft?" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/RUpO2ZoguzfyHgXbscSWnP
+
+<http://webprotege.stanford.edu/RUpO2ZoguzfyHgXbscSWnP> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:label "Anzahl Akten" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/Rpg17Hc6dAl08xIUxfwBDI
+
+<http://webprotege.stanford.edu/Rpg17Hc6dAl08xIUxfwBDI> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:label "Ausstrahlungsjahr" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://webprotege.stanford.edu/Rt9NwLIv8Am3CMxadNsD0n
+
+<http://webprotege.stanford.edu/Rt9NwLIv8Am3CMxadNsD0n> rdf:type owl:DatatypeProperty ;
+                                                        
+                                                        rdfs:label "Premierenart" ;
+                                                        
+                                                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://webprotege.stanford.edu/R4IZeKgzVXaz6JsryukYvl
+
+<http://webprotege.stanford.edu/R4IZeKgzVXaz6JsryukYvl> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:label "Video" ;
+                                                        
+                                                        rdfs:subClassOf owl:Thing .
+
+
+
+###  http://webprotege.stanford.edu/R50pOcs8ADDYRPo3Y5pW8B
+
+<http://webprotege.stanford.edu/R50pOcs8ADDYRPo3Y5pW8B> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:label "Archivinformation" ;
+                                                        
+                                                        rdfs:subClassOf owl:Thing .
+
+
+
+###  http://webprotege.stanford.edu/R7ppgGZ1d4hMl13DrqyT0IR
+
+<http://webprotege.stanford.edu/R7ppgGZ1d4hMl13DrqyT0IR> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:label "Theater bzw. Veranstalter" ;
+                                                         
+                                                         rdfs:subClassOf owl:Thing .
+
+
+
+###  http://webprotege.stanford.edu/RimYTnrBeOyQLwFqei2JtS
+
+<http://webprotege.stanford.edu/RimYTnrBeOyQLwFqei2JtS> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:label "Aufführung bzw. Produktion" ;
+                                                        
+                                                        rdfs:subClassOf owl:Thing .
+
+
+
+###  http://webprotege.stanford.edu/RoXnsiMNf0LkvhoiDtOuu4
+
+<http://webprotege.stanford.edu/RoXnsiMNf0LkvhoiDtOuu4> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:label "Werk bzw. Spieltext" ;
+                                                        
+                                                        rdfs:subClassOf owl:Thing .
+
+
+
+###  http://webprotege.stanford.edu/Rv4J389V8it5RD9O0cVmfN
+
+<http://webprotege.stanford.edu/Rv4J389V8it5RD9O0cVmfN> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:label "Medium" ;
+                                                        
+                                                        rdfs:subClassOf owl:Thing .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://webprotege.stanford.edu/RDQzQRP42pfVNbvm4WYHGqG
+
+<http://webprotege.stanford.edu/RDQzQRP42pfVNbvm4WYHGqG> rdf:type <http://webprotege.stanford.edu/RimYTnrBeOyQLwFqei2JtS> ,
+                                                                  owl:NamedIndividual ;
+                                                         
+                                                         rdfs:label "Mallorca bei Bern" .
+
+
+
+
+###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+
